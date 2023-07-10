@@ -1,0 +1,43 @@
+#include "myinclude.h"
+
+int main(){
+int x=33;
+int n;
+pid_t fiu;
+pipe
+int fd[2]; //fd[0] output olvasasra*****fd[1] input irasra
+
+if((pipe(fd[2]))<0)
+	syserr("pipe")
+
+if((fiu=fork())<0)
+	syserr("fork");
+	
+if (fiu==0){
+//fiu folyamat vagyok
+//printf("fiu sajat: pid %i apa pid: %i\n",getpid(),getppid());
+close(fd[0]); //olvasas lezarva
+
+x=55;
+n=write(fd[1],&x,4);
+if(n!=4)
+	printf("write hiba!\n");
+printf("fiu x ertek: %i\n",x);
+close(fd[1]);
+
+exit(0);
+}
+else{
+//apa folyamat vagyok
+//printf("apa sajat: pid %i apa sajat :pid %i\n",getpid(),getppid());
+//sleep(5);
+close(fd[1]);//iras leazarva
+n=read(fd[0],&x,4);
+if(n!=4)
+  printf("read hiba!\n");
+printf("apa x erteke: %i",x);
+close(fd[0]);
+waint(NULL);
+}
+exit(0)
+}
