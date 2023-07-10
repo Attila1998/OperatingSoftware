@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1490799946 source:/home/sdiak/Desktop/CsereiZoli/pipe/main.c
+	"myinclude.h"
+
+1488382144 /home/sdiak/Desktop/CsereiZoli/pipe/myinclude.h
+	<sys/stat.h>
+	<sys/unistd.h>
+	<sys/types.h>
+	<fcntl.h>
+	<stdlib.h>
+	<sys/wait.h>
+	<stdlib.h>
+	<signal.h>
+	<stdio.h>
+	<string.h>
+
+1491372712 source:/home/szabi/temp/test/diak/pipe/main.c
+	"myinclude.h"
+
+1491371933 /home/szabi/temp/test/diak/pipe/myinclude.h
+	<stdio.h>
+	<sys/stat.h>
+	<sys/unistd.h>
+	<sys/types.h>
+	<fcntl.h>
+	<stdlib.h>
+	<sys/wait.h>
+	<stdlib.h>
+	<signal.h>
+	<string.h>
+
